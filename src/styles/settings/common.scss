@@ -1,0 +1,242 @@
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #444444;
+}
+html{
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  overflow: hidden;
+}
+
+button {
+  display: block;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include rm(480) {
+    width: 480px;
+  }
+
+  @include rm(640) {
+    width: 640px;
+  }
+
+  @include rm(768) {
+    width: 768px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include rm(1024) {
+    width: 1024px;
+  }
+
+  @include rm(1220) {
+    width: 1220px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  color: $black;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+
+  @include rm(480) {
+    font-size: 30px;
+  }
+
+  @include rm(640) {
+    font-size: 34px;
+  }
+
+  @include rm(768) {
+    font-size: 38px;
+  }
+
+  @include rm(1024) {
+    font-size: 40px;
+  }
+
+  @include rm(1220) {
+    font-size: 46px;
+    text-align: left;
+  }
+}
+
+.text-medium {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-nowrap {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.bg-grey {
+  background-color: #f2eee7;
+}
+
+
+br {
+  line-height: 1;
+  font-size: 0;
+}
+
+.btn {
+  width: 260px;
+  background: linear-gradient(90deg, #FF5C00 0%, #FF8800 102.69%);
+  border-radius: 3px;
+  padding: 20px 0 20px 50px;
+  color: $white;
+  display: block;
+  font-size: 25px;
+  position: relative;
+  transition: 0.3s;
+  font-weight: 700;
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 48px;
+    transition: 0.3s;
+  }
+  &:hover {
+    background: linear-gradient(90deg, #FF8800 0%, #FF5C00 102.69%);
+    transition: all 1000ms linear;
+
+  }
+  &:hover::after {
+    right: 20px;
+    transition: .3s
+  }
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  fill: #f18a17;
+}
+
+.arrow-left, .arrow-right {
+  z-index: 20;
+  fill: #a5aeb5;
+  position: absolute;
+  cursor: pointer;
+}
+
+.slick-dots{
+  position: absolute;
+  left: 0;
+  text-align: center;
+}
+
+.slick-dots li button {
+  padding: 10px!important;
+}
+
+.slick-dots li button:before {
+  width: 6px!important;
+  height: 6px!important;
+}
+
+.slick-dots {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.slick-dots li.slick-active {
+  width: 6px !important;
+  height: 6px !important;
+  background-color: #f18a17;
+}
+.slick-dots li {
+  position: relative;
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+  padding: 0;
+  cursor: pointer;
+  width: 6px !important;
+  height: 6px !important;
+  margin: 0 8px !important;
+  border-radius: 50%;
+  background-color: #d8dade;
+  transition: .4s;
+  flex-shrink: 0;
+  @include rm(480){
+    margin: 0 11px !important;
+  }
+}
+
+.slick-list, .slick-slider {
+  position: relative;
+  display: block;
+}
+
+.show-480 {
+  display: none;
+  @include rm(480) {
+    display: block;
+  }
+  @include rm(640) {
+    display: none;
+  }
+}
+.show-1024 {
+  display: none;
+  @include rm(1024) {
+    display: block;
+  }
+}
+.show-1220 {
+  display: none;
+  @include rm(1220) {
+    display: block;
+  }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+::-ms-clear { display: none; }
+
+
+textarea {
+  overflow : auto;
+}
+
+.phoneBtnContainer {
+  @media(max-width: 1023px) {
+    display: none;
+  }
+}

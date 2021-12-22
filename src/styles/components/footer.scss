@@ -1,0 +1,44 @@
+.footer {
+    padding: 15px 0;
+    @include rm(1024) {
+        padding: 60px 0 25px;
+    }
+    @include rm(1220) {
+        padding: 120px 0 50px;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        @include rm(1024) {
+            justify-content: space-between;
+        }
+    }
+    &__item {
+        color: #444444;
+        display: none;
+        @include rm(1024) {
+            display: inline-block;
+        }
+        &--privacy {
+            color: black;
+            position: relative;
+            display: inline-block;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $black;
+            }
+        }
+        &:hover::before {
+            transition: .2s;
+            background-color: $white;
+        }
+    }
+    .item__link {
+        color: #444444;
+    }
+}

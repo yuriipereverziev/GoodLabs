@@ -1,0 +1,26 @@
+.ever-popup-build
+  #cloneThis.my-popup
+    .popup__left
+        .popup__prod
+          picture
+            source(media='(max-width:767px)' srcset='img/dot.png')
+            source(srcset="img/pack.webp", type="image/webp")
+            img(src="img/pack.png", alt="")
+    .popup__right
+      .popup__title.text-medium Заказать со&nbsp;скидкой
+      .form__price.popup__price
+        .form__price-old
+          span.x_price_previous.form__price-previous 59.90
+          span.x_currency.x_currency--old  $
+        .form__price-new
+          span.x_price_current.form__price-current 50.90
+          span.x_currency.form__price-currency $
+      .action__form.form
+        form.x_order_form(action='/submit' method='post')
+          .form__name
+            img.form__img(src='img/name.svg' alt='image' loading='lazy' width='19' height='19')
+            input.input(type='text' name='name' placeholder='Ваше имя' required autocomplete='name')
+          .form__phone
+            img.form__img(src='img/phone.svg' alt='image' loading='lazy' width='19' height='19')
+            input.input(type='tel' name='phone' placeholder='Ваш телефон' required autocomplete='tel')
+          button.btn.popup__btn Заказать

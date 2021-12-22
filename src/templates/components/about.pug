@@ -1,0 +1,29 @@
+mixin about(item)
+  .slide
+    .slide__photo
+      picture
+        source(srcset!= item.src + '.webp' type="image/webp")
+        img.slide__img(loading='lazy', src!= item.src +'.jpg', alt='photo' width='270' height='270')
+-
+  const aboutItemsWrap = [
+  {src: 'img/about__slider--1'},
+  {src: 'img/about__slider--2'},
+  {src: 'img/about__slider--3'},
+  {src: 'img/about__slider--4'},
+  {src: 'img/about__slider--1'},
+  {src: 'img/about__slider--2'},
+  {src: 'img/about__slider--3'},
+  {src: 'img/about__slider--4'}
+  ];
+
+section.about.block
+  .container
+    .about__wrapper
+        h2.about__title.title.text-medium About Immunal
+        .about__instagram
+          span.instagram-text Join Us in Instagram @goodlabs.Immunal
+          a.instagram-link(href="https://www.instagram.com/goodlabs_immunal/?hl=ru")
+            img(src="img/instagram.png", alt="icon").instagram-img
+    .about__slider.js-about-slider
+        each item in aboutItemsWrap
+            +about(item)

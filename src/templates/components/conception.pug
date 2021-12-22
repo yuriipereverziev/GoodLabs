@@ -1,0 +1,52 @@
+mixin conception(item)
+  .slide
+    .slide__photo
+      picture
+        source(srcset!= item.src + '.webp' type="image/webp")
+        img.slide__img(loading='lazy', src!= item.src +'.jpg', alt='photo' width='370' height='250')
+    .slide__desc
+      p.slide__text!= item.text
+-
+  const conceptionItemsWrap = [
+  {
+  src: 'img/conception__slider--1',
+  text: 'Повторяющиеся простуды с осложнениями'
+  },
+  {
+  src: 'img/conception__slider--2',
+  text: 'Постоянная слабость и усталость'
+  },
+  {
+  src: 'img/conception__slider--3',
+  text: 'Частые головные боли'
+  },
+  {
+  src: 'img/conception__slider--4',
+  text: 'Ухудшение состояния волос и ногтей'
+  },
+  {
+  src: 'img/conception__slider--5',
+  text: 'Боли в суставах'
+  },
+  {
+  src: 'img/conception__slider--6',
+  text: 'Апатия и раздражительность'
+  }
+  ];
+
+section.conception.block
+  .container
+    .conception__wrapper
+      h2.conception__title.title Как понять, что у&nbsp;вас пониженный иммунитет
+      p.conception__text
+        | Защитная функция организма — сложный механизм, который формировался
+        | на протяжении всей эволюции человечества. Иммунная система была запрограммирована уничтожать все потенциально
+        | опасные вирусы и бактерии, угрожающие здоровью. Но внешние факторы могут спровоцировать нарушение этих
+        | алгоритмов, подавив иммунную активность организма. Вот что указывает на сниженный иммунитет:
+
+    .conception__slider.js-conception-slider
+          each item in conceptionItemsWrap
+            +conception(item)
+
+    p.conception__desc.text-bold Укрепить иммунные свойства под силу комплексу Immunal
+

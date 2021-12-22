@@ -1,0 +1,226 @@
+.promo {
+    padding-top: 65px;
+    @include rm(480) {
+        padding-top: 65px;
+    }
+    @include rm(1220) {
+        padding-top: 205px;
+    }
+    .container {
+        @include rm(640) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @include rm(1024) {
+            justify-content: flex-start;
+            flex-direction: column;
+            position: relative;
+        }
+    }
+    &.block {
+        @include rm(1024) {
+            padding-bottom: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+        @include rm(640) {
+            margin-bottom: 25px;
+        }
+        @include rm(1024) {
+            max-width: 480px;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+        @include rm(1220) {
+            max-width: 550px;
+            margin-bottom: 65px;
+        }
+    }
+    .title__main {
+        color: $white;
+        font-size: 27px;
+        text-align: center;
+        margin-bottom: 15px;
+        @include rm(480) {
+            font-size: 28px;
+        }
+        @include rm(640) {
+            font-size: 34px;
+        }
+        @include rm(768) {
+            font-size: 38px;
+        }
+        @include rm(1024) {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        @include rm(1220) {
+            font-size: 46px;
+            margin-bottom: 20px;
+        }
+    }
+    .title__subtitle {
+        color: $white;
+        font-size: 18px;
+        text-align: center;
+        @include rm(640) {
+            font-size: 22px;
+        }
+        @include rm(768) {
+            font-size: 24px;
+        }
+        @include rm(1024) {
+            text-align: left;
+        }
+    }
+    &__product {
+        margin: 0 auto 20px;
+        max-width: 200px;
+        @include rm(480) {
+            max-width: 200px;
+        }
+        @include rm(640) {
+            order: 2;
+            margin: 0 0 20px 0;
+        }
+        @include rm(1024) {
+            margin: 0;
+            position: absolute;
+            bottom: -29px;
+            left: 510px;
+            max-width: 170px;
+        }
+        @include rm(1220) {
+            max-width: 253px;
+            bottom: -49px;
+            left: 580px;
+        }
+    }
+    &__btn {
+        margin: 0 auto 30px;
+        @include rm(480) {
+            margin: 0 auto 30px;
+        }
+        @include rm(640) {
+            order: 2;
+            margin: 0 auto;
+        }
+        @include rm(1024) {
+            margin: 0 0 80px;
+        }
+        @include rm(1220) {
+            margin-bottom: 228px;
+        }
+    }
+    &__mark {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 300px;
+        justify-content: space-between;
+        margin: 0 auto;
+        @include rm(480) {
+            max-width: 100%;
+        }
+        @include rm(640) {
+            order: 1;
+            max-width: 270px;
+            margin: 0 30px 20px 0;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        @include rm(1024) {
+            display: none;
+        }
+    }
+    .mark__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: calc(25% - 10px);
+        @include rm(400) {
+            width: 50%;
+        }
+        @include rm(480) {
+            width: calc(25% - 10px);
+        }
+        @include rm(640) {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+        }
+        @include rm(1024) {
+            width: calc(25% - 50px);
+        }
+        &:nth-child(2),
+        &:first-child {
+            @include rm(400) {
+                margin-bottom: 15px;
+            }
+            @include rm(480) {
+                margin-bottom: 0;
+            }
+        }
+        &:not(:last-child) {
+            @include rm(480) {
+                margin-right: 10px;
+            }
+            @include rm(640) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .item__img {
+        @include rm(400) {
+            margin-bottom: 5px;
+        }
+        @include rm(480) {
+            margin-bottom: 10px;
+        }
+        @include rm(640) {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+    }
+    .item__text {
+        display: none;
+        @include rm(400) {
+            color: $white;
+            display: inline-block;
+        }
+    }
+}
+
+.webp .promo {
+    background-image: url(../img/promo-bg-mob1.webp);
+    background-size: cover;
+    @include rm(480) {
+        background-image: url(../img/promo-bg1.webp); 
+    }
+    @include rm(1220) {
+        background-position-x: -286px;
+    }
+    @include rm(1550) {
+        background-position-x: 0;
+    }
+}
+
+.no-webp .promo {
+    background-image: url(../img/promo-bg-mob1.png);
+    background-size: cover;
+    @include rm(480) {
+        background-image: url(../img/promo-bg1.png); 
+    }
+    @include rm(1220) {
+        background-position-x: -286px;
+    }
+    @include rm(1550) {
+        background-position-x: 0;
+    }
+}

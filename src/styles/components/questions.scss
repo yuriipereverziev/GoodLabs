@@ -1,0 +1,124 @@
+.questions__list {
+  max-width: 835px;
+  margin: 0 auto;
+}
+
+.questions__title {
+  margin-bottom: 20px;
+  @include rm(1220) {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.questions__item-title {
+  position: relative;
+  padding-right: 40px;
+  cursor: pointer;
+  @include rm(1220) {
+    font-size: 18px;
+  }
+}
+
+.questions__item {
+  position: relative;
+  &:not(:last-of-type) {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;
+    @include rm(480) {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    @include rm(640) {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+    }
+    @include rm(1024) {
+      padding-bottom: 30px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.questions__item-text {
+  //padding-top: 15px;
+  overflow: hidden;
+  max-height:0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  @include rm(640) {
+    //padding-top: 20px;
+  }
+}
+
+.questions__item.active .questions__item-text {
+  padding-top: 15px;
+  opacity: 1;
+  max-height: 300px;
+  transition: 1s ease-in-out;
+  @include rm(640) {
+    padding-top: 20px;
+  }
+}
+
+
+.questions__item-button {
+  position: absolute;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  @include rm(640) {
+    width: 25px;
+    height: 25px;
+  }
+}
+.questions__item-button::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 18px;
+  background-color: #000000;
+  top: 50%;
+  right: -9px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  @include rm(640) {
+    width: 22px;
+  }
+}
+
+.questions__item-button::after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 2px;
+  background-color: #000000;
+  top: 50%;
+  right: 7px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  transition: 0.3s;
+  @include rm(640) {
+    height: 22px;
+    right: 11px;
+  }
+}
+
+
+.questions__item.active .questions__item-button::after {
+  transform: translate(-50%,-50%) rotate(90deg);
+  transition: 0.3s;
+}
+
+.questions {
+  @include rm(1220) {
+    padding: 106px 0 120px;
+  }
+}

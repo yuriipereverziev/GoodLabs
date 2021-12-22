@@ -1,0 +1,158 @@
+.scientists .container {
+  @include rm(768) {
+    display: flex;
+  }
+}
+
+.scientists__wrapper {
+  @include rm(768) {
+    max-width: 300px;
+  }
+}
+
+.scientists__title {
+  position: relative;
+  margin-bottom: 25px;
+  @include rm(768) {
+    margin-bottom: 60px;
+    text-align: left;
+  }
+
+  @include rm(1220) {
+    font-size: 40px;
+  }
+
+}
+
+.scientists__icon {
+  display: none;
+  @include rm(768) {
+    width: 200px;
+    display: block;
+    margin: 0 ;
+  }
+  @include rm(1024) {
+    width: 220px;
+  }
+}
+
+.scientists__quote {
+  margin: 0 10px;
+}
+
+.scientists__slider__wrapper{
+  max-width: 370px;
+  margin: 0 auto;
+  @include rm(640) {
+    max-width: 550px;
+  }
+  @include rm(1024) {
+    max-width: 600px;
+  }
+  @include rm(1220) {
+    max-width: 700px;
+  }
+}
+
+
+.scientists__quote img {
+  width: 40px;
+  margin-bottom: 30px;
+  @include rm(1024) {
+    width: 50px;
+    margin-top: 40px;
+  }
+  @include rm(1220) {
+    width: 60px;
+    margin-top: 36px;
+  }
+}
+
+.scientists .slide__name {
+  font-weight: 600;
+  font-size: 18px;
+  @include rm(768) {
+    font-size: 20px;
+  }
+  @include rm(1024) {
+    font-size: 22px;
+  }
+}
+
+.scientists .slide__text {
+
+  margin-bottom: 15px;
+  @include rm(1024) {
+    font-size: 18px;
+  }
+  @include rm(1220) {
+    font-size: 20px;
+  }
+}
+
+
+.scientists__slider {
+  max-width: 370px;
+  position: relative;
+  margin: 0 auto;
+  @include rm(640) {
+    max-width: 550px;
+  }
+  @include rm(768) {
+    max-width: 400px;
+    margin: 0 0 0 auto;
+  }
+  @include rm(1024) {
+    max-width: 600px;
+  }
+  @include rm(1220) {
+    max-width: 700px;
+
+  }
+
+}
+
+.scientists .slick-slide {
+  margin: 0 20px;
+  @include rm(480) {
+    margin: 0 10px;
+  }
+  @include rm(1220) {
+    margin: 0 15px;
+  }
+}
+
+
+.scientists .slide {
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 25px;
+  @include rm(1024){
+    padding-bottom: 40px;
+  }
+}
+
+.scientists .arrow-left,
+.scientists .arrow-right {
+  top: -60px;
+  @include rm(1024) {
+    top: -54px;
+  }
+
+}
+
+.scientists .arrow-left {
+  right: 70px;
+}
+
+.scientists .arrow-right {
+  right: 0;
+}
+
+.scientists .slick-dots {
+  bottom: 0;
+  @include rm(768) {
+    width: 110px;
+    left: 0;
+  }
+}

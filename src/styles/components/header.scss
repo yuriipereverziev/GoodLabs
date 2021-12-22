@@ -1,0 +1,168 @@
+.header {
+  .container {
+    position: relative;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    z-index: 10;
+  }
+
+  &__content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    max-width: 300px;
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+    padding: 20px;
+    overflow: auto;
+    z-index: 11;
+  }
+
+  .content__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list__item {
+    font-size: 18px;
+  }
+
+  .item__link {
+    color: black;
+    border-bottom: 1px solid $white;
+
+    &:hover {
+      border-bottom: 1px solid $black;
+    }
+  }
+
+  .list__item:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  .content__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .top__close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: $black;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: $black;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  &__mob {
+    transition: all 200ms;
+  }
+
+  &__bg {
+    display: none;
+    z-index: 10;
+  }
+
+  .header__mob.open .header__bg {
+    display: block;
+  }
+
+  &__content {
+    transform: translateX(-100%);
+    transition: all 200ms;
+  }
+
+  &__mob.open {
+    transition: all 200ms;
+  }
+
+  .header__mob.open .header__content {
+    transform: translateX(0);
+    transition: all 200ms;
+  }
+
+  .menu-desc {
+    display: none;
+  }
+
+  &__burger {
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+}
+
+@include rm(1024) {
+  .header {
+      padding: 20px 0;
+    &__burger {
+      display: none;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      position: static;
+      max-width: 100%;
+      height: auto;
+      transform: translateX(0);
+      padding: 0;
+    }
+    .content__top {
+        margin-bottom: 0;
+        margin-right: 120px;
+    }
+    .top__close {
+        display: none;
+    }
+    .content__list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .list__item:not(:last-of-type) {
+        margin-bottom: 0px;
+        margin-right: 80px;
+    }
+  }
+}
+
+@include rm(1220) {
+    .header {
+        .content__top {
+            margin-right: 170px;
+        }
+        .list__item:not(:last-of-type) {
+            margin-right: 85px;
+        }
+    }
+}

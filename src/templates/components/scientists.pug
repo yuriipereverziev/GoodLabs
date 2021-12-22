@@ -1,0 +1,38 @@
+mixin scientists(item)
+  .slide
+      p.slide__text!= item.text
+      p.slide__name!= item.name
+-
+  const scientistsItemsWrap = [
+  {
+
+  text: '“Elderberry has medicinal properties associated with the presence of polyphenols, which are compounds with potential antioxidant properties. They can greatly affect the course of disease processes by counteracting oxidative stress, exerting beneficial effects on blood pressure, glycaemia reduction, immune system stimulation, antitumor potential, increase in the activity of antioxidant enzymes in the blood plasma, including also glutathione, and the reduction of uric acid levels”. — Andrzej Sidor (Gramza-Michałowska Anna, Sidor Andrzej. Advanced research on the antioxidant and health benefits of elderberry (Sambucus nigra) in food (Journal of Functional Foods) 2015, Pages 941-958).',
+  name: 'Andrzej Sidor'
+  },
+  {
+
+  text: '“Beta-glucans increase host immune defense by activating complement systems, enhancing macrophages and natural killer cell function. As an immunostimulating agent, which acts through the activation of macrophages and NK cell cytotoxicity, beta-glucan can inhibit tumor growth in promotion stage too”. — Dalia Akramiene (Akramiene D, Kondrotas A, Didziapetriene J, Kevelaitis E. Effects of beta-glucans on the immune system. Medicina (Kaunas). 2007;43(8):597-606).',
+  name: 'Dalia Akramiene'
+  },
+  {
+  text: '“The relevance of zinc status to many age-associated diseases and, according to experimental studies, the aging itself of the major homeostatic mechanisms of the body, i.e., the nervous, neuroendocrine and immune systems, places zinc in a pivotal position in the economy of the organism”. — N. Fabris (Fabris N, Mocchegiani E. Zinc, human diseases and aging. Aging (Milano) 1995;7:77-93)',
+  name: 'N. Fabris'
+  },
+  {
+  text: '“There is great interest in the clinical roles of vitamin C because of evidence that oxidative damage is a root cause of, or at least associated with, many diseases. Population studies show that individuals with high intakes of vitamin C have lower risk of a number of chronic diseases, including heart disease, cancer, eye diseases, and neurodegenerative conditions”. — Robert A Jacob (Jacob RA, Sotoudeh G. Vitamin C function and status in chronic disease. Nutr Clin Care 2002;5:66-74)',
+  name: 'Robert A Jacob'
+  }
+  ];
+
+section.scientists.block.bg-grey(id="scientists")
+  .container
+      .scientists__wrapper
+        h2.scientists__title.title Ученые о компонентах
+        img.scientists__icon(src='img/scientists__icon.png' alt='icon' width='260' height='240')
+
+      .scientists__slider__wrapper
+        .scientists__quote
+          img(src='img/quote.png' alt='quote' loading='lazy')
+        .scientists__slider.js-scientists-slider
+              each item in scientistsItemsWrap
+                +scientists(item)

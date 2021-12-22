@@ -1,0 +1,40 @@
+.action.block.bg-grey
+  .container
+    .action__desk
+      picture
+        source(type='image/webp' srcset='img/prod-pack.webp')
+        img.action__prod(src='img/prod-pack.png' alt='product' width='264' height='275')
+
+    h2.action__title.action__title--mob.title Только сегодня&nbsp;
+      br
+      span.date-0
+      |   скидка&nbsp;
+      span.action__percent 50%
+
+    .action__mob
+      picture
+        source(type='image/webp' srcset='img/prod-pack.webp')
+        img.action__prod(src='img/prod-pack.png' alt='product' width='264' height='275')
+
+    .action__col-right
+      h2.action__title.action__title--desk.title Только сегодня&nbsp;
+        br
+        span.date-0
+        |   скидка&nbsp;
+        span.action__percent 50%
+      .form__price
+        .form__price-old
+          span.x_price_previous.form__price-previous 59.90
+          span.x_currency.x_currency--old  $
+        .form__price-new
+          span.x_price_current.form__price-current 50.90
+          span.x_currency.form__price-currency $
+      .action__form.form
+        form.x_order_form(action='/submit' method='post')
+          .form__name
+            img.form__img(src='img/name.svg' alt='image' loading='lazy' width='19' height='19')
+            input.input(type='text' name='name' placeholder='Ваше имя' required autocomplete='name')
+          .form__phone
+            img.form__img(src='img/phone.svg' alt='image' loading='lazy' width='19' height='19')
+            input.input(type='tel' name='phone' placeholder='Ваш телефон' required autocomplete='tel')
+          button.btn.form__btn Заказать

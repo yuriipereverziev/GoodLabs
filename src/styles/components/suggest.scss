@@ -1,0 +1,162 @@
+.suggest__wrapper {
+  margin-bottom: 30px;
+  @include rm(480) {
+    margin-bottom: 40px;
+  }
+  @include rm(1024) {
+    max-width: 400px;
+  }
+}
+
+.suggest__title {
+  margin-bottom: 20px;
+  @include rm(1024) {
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  @include rm(1220) {
+    margin-bottom: 40px;
+  }
+}
+
+.suggest__subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: $black;
+  @include rm(1024) {
+    margin-bottom: 10px;
+  }
+}
+
+.suggest__item{
+  color: #777777;
+}
+.suggest__item:not(:last-of-type) {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid $black;
+}
+
+.suggest {
+  .container {
+    @include rm(1024) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.suggest__table {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include rm(640) {
+    align-items: center;
+  }
+  @include rm(1024) {
+    width: 500px;
+    margin: 0;
+  }
+  @include rm(1220) {
+
+    width: 600px;
+  }
+}
+
+.suggest__row {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  @include rm(640) {
+    width: 100%;
+  }
+}
+
+.suggest__row:not(:last-of-type) {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.suggest__row:first-child {
+  border-bottom: 2px solid $black;
+}
+
+.suggest__cell {
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.suggest__cell--header {
+  font-weight: 600;
+  align-items: flex-end;
+  padding: 0 0 10px 0;
+  color: $black;
+  font-size: 17px;
+  @include rm(768) {
+    font-size: 18px;
+  }
+  @include rm(1220) {
+    padding: 0 0 21px 0;
+  }
+}
+
+.suggest__cell--quantity {
+  text-align: center;
+  justify-content: center;
+  @include rm(480) {
+    width: 40%;
+  }
+  @include rm(640) {
+    width: 33.3%;
+  }
+  @include rm(1024) {
+    width: 40%;
+  }
+  @include rm(1220) {
+    width: 33.3%;
+    justify-content: flex-end;
+  }
+}
+
+.suggest__cell--source {
+  width: 20%;
+  justify-content: flex-end;
+  @include rm(640) {
+    width: 33.3%;
+  }
+  @include rm(1024) {
+    width: 20%;
+  }
+}
+
+.suggest__cell--weight {
+  width: 20%;
+  justify-content: flex-end;
+  @include rm(640) {
+    width: 33.3%;
+    justify-content: flex-end;
+  }
+  @include rm(1024) {
+    width: 20%;
+  }
+}
+
+.suggest__cell--component {
+  @include rm(480) {
+    width: 25%;
+  }
+  @include rm(640) {
+    width: 33.3%;
+  }
+  @include rm(1024) {
+    width: 31%;
+  }
+  @include rm(1220) {
+    width: 33.3%;
+  }
+}

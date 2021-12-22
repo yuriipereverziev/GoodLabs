@@ -1,0 +1,855 @@
+section.reviews.block(id="reviews")
+    .container
+        .reviews__header
+            h2.header__title.title Отзывы
+            .header__btn.text-medium Оставить отзыв
+        .reviews__background
+            form.reviews__feedback(action="/")
+                .feedback__close
+                h3.feedback__title.text-medium Оставить отзыв
+                .feedback__top
+                    .top__item.top__item--appraisal
+                        span.top__text Ваша оценка
+                        .top__stars
+                            span.star.appraisal__star(data-value="1")
+                            span.star.appraisal__star(data-value="2")
+                            span.star.appraisal__star(data-value="3")
+                            span.star.appraisal__star(data-value="4")
+                            span.star.appraisal__star(data-value="5")
+                    .top__item
+                        span.top__text Качество
+                        .top__stars.top__stars
+                            span.star.quality__star(data-value="1")
+                            span.star.quality__star(data-value="2")
+                            span.star.quality__star(data-value="3")
+                            span.star.quality__star(data-value="4")
+                            span.star.quality__star(data-value="5")
+                    .top__item
+                        span.top__text Стоимость
+                        .top__stars.top__stars--cost
+                            span.star.cost__star(data-value="1")
+                            span.star.cost__star(data-value="2")
+                            span.star.cost__star(data-value="3")
+                            span.star.cost__star(data-value="4")
+                            span.star.cost__star(data-value="5")
+                .feedback__middle
+                    .middle__left
+                        .input__wrapper.input__wrapper--name
+                            input.feedback__input.input(type='text' name='name' placeholder='Ваше имя' required)
+                        .input__wrapper.input__wrapper--phone
+                            input.feedback__input.input(type="text" name='phone' placeholder='Ваш телефон' required)
+                    .middle__right
+                        .input__wrapper.input__wrapper--message
+                            textarea.feedback__input.feedback__area(placeholder="Cообщение" required)
+                        .photo__wrapper
+                            label.reviews-form__file(for="file")
+                                span.reviews-form__file-img
+                                    span.reviews-form__checkmark-icon
+                                        svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24")
+                                            path(fill="#0f0", d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z")
+                                span.reviews-form__file-text Добавить фото
+                            input.visually-hidden.input-file.reviews-input(id="file", type="file" accept="image/*" multiple)
+                button.btn.feedback__button.text-medium Отправить
+        .reviews__statistic
+            .statistic__rating
+                p.rating__row.text-medium Рейтинг
+                .rating__row
+                    .row__star 5
+                    .row__scale
+                        .scale__orange-bg(id="orange5")
+                    .row__amount(id="totalWithRating5")
+                .rating__row
+                    .row__star 4
+                    .row__scale
+                         .scale__orange-bg(id="orange4")
+                    .row__amount(id="totalWithRating4")
+                .rating__row
+                    .row__star 3
+                    .row__scale
+                         .scale__orange-bg(id="orange3")
+                    .row__amount(id="totalWithRating3")
+                .rating__row
+                    .row__star 2
+                    .row__scale
+                         .scale__orange-bg(id="orange2")
+                    .row__amount(id="totalWithRating2")
+                .rating__row
+                    .row__star 1
+                    .row__scale
+                         .scale__orange-bg(id="orange1")
+                    .row__amount(id="totalWithRating1")
+            .statistic__average
+                p.average__row.text-medium Средняя оценка клиентов
+                .average__row
+                    .row__text Общий
+                    .row__indicators
+                        .row__indicators--stars
+                    .row__amount(id="avgMark")
+                .average__row
+                    .row__text Качество
+                    .row__indicators.row__indicators--block
+                        .indicators__orange-bg(id="orangeQuality")
+                        .indicators__delimiter.indicators__delimiter--1
+                        .indicators__delimiter.indicators__delimiter--2
+                        .indicators__delimiter.indicators__delimiter--3
+                        .indicators__delimiter.indicators__delimiter--4
+                    .row__amount(id="avgQuality")
+                .average__row
+                    .row__text Стоимость
+                    .row__indicators.row__indicators--block
+                        .indicators__orange-bg(id="orangePrice")
+                        .indicators__delimiter.indicators__delimiter--1
+                        .indicators__delimiter.indicators__delimiter--2
+                        .indicators__delimiter.indicators__delimiter--3
+                        .indicators__delimiter.indicators__delimiter--4
+                    .row__amount(id="avgPrice")
+        .reviews__content
+            .content__menu
+                .menu__count 1-
+                    span.count__in-page.js-reviews-active-count 8
+                    | &nbsp;из&nbsp;
+                    span.count__all.js-reviews-count 81
+                    | &nbsp;отзывов
+                .menu__sort.js-menu-sort
+                    .sort__text
+                        p.text__static Сортировать:
+                        p.text__selected.js-text__selected.active выберите способ
+                        p.text__selected.js-text__selected.js-menu-item-1 от самого высокого&nbsp;
+                            br
+                            | до самого низкого рейтинга
+                        p.text__selected.js-text__selected.js-menu-item-2 от самого низкого&nbsp;
+                            br
+                            | до самого высокого
+                    .sort__open
+                    ul.sort__menu.menu-s.active.js-menu-active
+                        li.menu-s__item.js-menu-item.js-menu-item-1 Рейтинг от самого высокого до самого низкого
+                        li.menu-s__item.js-menu-item.js-menu-item-2 Рейтинг от самого низкого до самого высокого
+            #floatingCirclesG
+                .f_circleG#frotateG_01
+                .f_circleG#frotateG_02
+                .f_circleG#frotateG_03
+                .f_circleG#frotateG_04
+                .f_circleG#frotateG_05
+                .f_circleG#frotateG_06
+                .f_circleG#frotateG_07
+                .f_circleG#frotateG_08
+            ul.content__list.js-content__list
+                li.list__item.js-list-reviews.active(data-rating="5" data-quality="4" data-price="4")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 6 дней назад
+                    .item__middle
+                        p.middle__title.text-medium Проверенный способ улучшения&nbsp;иммунитета
+                        .middle__main
+                            p.main__text Для себя я открыла еще один способ улучшения иммунитета —&nbsp;это прием комплекса Immunal. Он содержит&nbsp;
+                                span.text-nowrap  бета-глюкан,
+                                |   который повышает сопротивляемость организма в период обострения&nbsp;ОРВИ.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.like.js-reaction Да
+                            .yes__num 15
+                        .useful__no.text-medium
+                            .no__text.dislike.js-reaction Нет
+                            .no__num 5
+                li.list__item.js-list-reviews.active(data-rating="5" data-quality="4" data-price="4")
+                    .item__header
+                        .header__stars
+                            .stars.stars__grey
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 6 дней назад
+                    .item__middle
+                        p.middle__title.text-medium Идеальное комбо!
+                        .middle__main
+                            p.main__text Какое-то чудесное сочетание витаминов, натуральных экстрактов и&nbsp;микроэлементов, которое помогает держаться на&nbsp;ногах при первых признаках гриппа и&nbsp;простуды. Не&nbsp;нравится только,
+                                | что в&nbsp;банке 30&nbsp;капсул, за&nbsp;это снимаю одну звезду.
+                                br
+                                picture
+                                    source(srcset="img/about__slider--1.webp" type="image/webp")
+                                    img(src="img/about__slider--1.jpg", alt="review-photo" loading='lazy').review__img.review__img--first
+                                picture
+                                    source(srcset="img/about__slider--4.webp" type="image/webp")
+                                    img(src="img/about__slider--4.jpg", alt="review-photo" loading='lazy').review__img
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 10
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 2
+                li.list__item.js-list-reviews.active(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 5 дней назад
+                    .item__middle
+                        p.middle__title.text-medium Мой личный источник здоровья
+                        .middle__main
+                            p.main__text Данные таблетки являются источником витамина&nbsp;С, цинка и&nbsp;и других полезных веществ, состав говорит сам&nbsp;за&nbsp;себя. Все что нужно в&nbsp;период заболеваемости для&nbsp;профилактики простуды и&nbsp;гриппа. На&nbsp;мне Immunal всегда работает безотказно.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews.active(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 5 дней назад
+                    .item__middle
+                        p.middle__title.text-medium Суперсредство
+                        .middle__main
+                            p.main__text Раньше часто болела, а сейчас ни один недуг не способен свалить меня с ног. Вот что значит хороший иммунитет!
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 4
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews.active(data-rating="3" data-quality="4" data-price="4")
+                    .item__header
+                        .header__stars
+                            .stars.stars__grey-3
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 4 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Неплохо
+                        .middle__main
+                            p.main__text Покупал витаминный комплекс Immunal месяц назад, только начал прием, но эффект пока не понял. Не нравится, что в баночке только 30 капсул. Постоянно нужно дозаказывать.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                                    //.scale__block--grey
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                                    //.scale__block--grey
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 1
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 3
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 4 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Достойное иммуноподдерживающее средство
+                        .middle__main
+                            p.main__text Начал принимать Immunal перед новым сезоном простуд. За это время ни разу не было ни температуры, ни кашля, ни других дискомфортных симптомов.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 2
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 4 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Беру и себе, и родителям
+                        .middle__main
+                            p.main__text Immunal принимаю не только я, но и мои пожилые родители. Переживаю за их жизнь и здоровье, поэтому стараюсь поддерживать их иммунитет фруктами и  комплексом Immunal.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 20
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 4 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Увидела состав и обрадовалась
+                        .middle__main
+                            p.main__text Ну наконец в продаже появились витаминные комплексы с действительно сбалансированным составом! Immunal имеет хорошую дозировку и отлично усваивается организмом.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 3
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 4 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Очень практично
+                        .middle__main
+                            p.main__text Это средство понравится тем, кто не любит покупать миллион банок, а предпочитает комбинированные комплексы, где есть сразу все. Immunal именно такой.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 5
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 4 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Не только для иммунитета
+                        .middle__main
+                            p.main__text У Immunal шикарный состав: витамин D, витамин C, селен и цинк. Лично я его брала из-за селена и цинка, так как эта комбинация хорошо оздоравливает щитовидку.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                      .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Хорошая дозировка
+                        .middle__main
+                            p.main__text Долго искал комплексное средство, в котором все компоненты будут сбалансированы. Immunal стал моим открытием в этом плане. Хорошие профилактические дозировки и отличная биоусвояемость.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 9
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="4" data-quality="4" data-price="4")
+                    .item__header
+                        .header__stars
+                            .stars.stars__grey
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Остался доволен
+                        .middle__main
+                            p.main__text Есть только один минус — маленькая упаковка. Хотелось бы, чтобы выпускали большие банки с большим количеством капсул.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                                    //.scale__block--grey
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                       .scale__block.scale__block--4
+                                    //.scale__block--grey
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Я это люблю
+                        .middle__main
+                            p.main__text Люблю GoodLabs за хорошее сочетание цены и качества. Immunal покупаем всей семьей на постоянной основе.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Находка среди иммунных комплексов
+                        .middle__main
+                            p.main__text Immunal стал моим открытием прошлого сезона. Много всего перепробовал, но это средство работает на все 100%. Ни одной простуды за несколько месяцев, а раньше часто болел.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 9
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Лучшее, что я пробовала
+                        .middle__main
+                            p.main__text Лично для меня комплекс Immunal ничем не уступает дорогим противовирусным препаратам. Только в отличие от синтетики тут состав натуральный и сбалансированный, каждый компонент имеет научное подтверждение эффективности.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Наладил работу ЖКТ
+                        .middle__main
+                            p.main__text Брала Immunal для поддержки иммунитета, а он мне помог наладить пищеварение. Всегда имела проблемы с ЖКТ, теперь ощущения в желудке намного более комфортные.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="4" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars.stars__grey
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Понравилось
+                        .middle__main
+                            p.main__text Принимаем Immunal всего неделю, но уже пропала сонливость и слабость. Вообще, отличный состав, дополнительно можно ничего не принимать больше. Закажем еще на будущее.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Мой личный источник здоровья
+                        .middle__main
+                            p.main__text Данные капсулы являются источником витамина&nbsp;С, цинка и&nbsp;бузины, состав говорит сам&nbsp;за&nbsp;себя. Все что нужно в&nbsp;период заболеваемости для&nbsp;профилактики простуды и&nbsp;гриппа. На&nbsp;мне Immunal всегда работает безотказно.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="4" data-quality="4" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars.stars__grey
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Он действительно работает
+                        .middle__main
+                            p.main__text Благодаря Immunal чувствую себя отлично. За время приема только раз перенесла простуду и то в легкой форме.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="4")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Нужные витамины в период простуд
+                        .middle__main
+                            p.main__text В период массовой заболеваемости важно помогать своему организму и поддерживать его. Витаминный комплекс Immunal хорошо справляется с поставленной задачей.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 15
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 3 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Отличный антиоксидант
+                        .middle__main
+                            p.main__text Удобно, что в составе Immunal более 4 компонентов, играющих роль антиоксидантов. Защита от свободных радикалов — залог крепкого иммунитета.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 10
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 2 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Мастхев!
+                        .middle__main
+                            p.main__text Immunal — мастхев этого года. В профилактических целях принимаю и я, и муж. За все время массовой заболеваемости еще ни разу не почувствовали симптомов простуды.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="4" data-quality="4" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars.stars__grey
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 2 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Очень неплохо
+                        .middle__main
+                            p.main__text Принимаю Immunal относительно недолго, меньше месяца. Конкретные выводы пока делать сложно, но заметила, что стало больше энергии и ощущения в желудке более комфортные.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--4
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="5" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 2 дня назад
+                    .item__middle
+                        p.middle__title.text-medium Все, что нужно для здоровья
+                        .middle__main
+                            p.main__text Иммунитет — основа нашего здоровья. Именно поэтому я несколько раз в год принимаю курс Immunal. Он заботится о моем организме и укрепляет защитные силы.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 7
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 0
+                li.list__item.js-list-reviews(data-rating="5" data-quality="4" data-price="5")
+                    .item__header
+                        .header__stars
+                            .stars
+                        span.header__name.text-medium Mrdabs Extracts
+                        span.header__date 2 дня назад
+                    .item__middle
+                        p.middle__title.text-medium На страже иммунитета
+                        .middle__main
+                            p.main__text Сначала меня привлек хороший состав Immunal, но теперь я продолжаю принимать препарат, благодаря его отличному действию на мой организм.
+                            .main__evaluation
+                                .evaluation__quality
+                                    p.evaluation__text Качество
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                                .evaluation__cost
+                                    p.evaluation__text Стоимость
+                                    .evaluation__scale
+                                        .scale__block.scale__block--5
+                    .item__useful
+                        p.useful__text Полезно?
+                        .useful__yes.text-medium
+                            .yes__text.js-reaction.like Да
+                            .yes__num 9
+                        .useful__no.text-medium
+                            .no__text.js-reaction.dislike Нет
+                            .no__num 2
+            .list__item.reviews__toogle
+                span.reviews__open.js-reviews-open Смотреть еще 5 отзывов
+                span.reviews__close.js-reviews-close Скрыть

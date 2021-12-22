@@ -1,0 +1,16 @@
+.product
+  .container
+    picture
+      source(media="(max-width:479px)" srcset="img/pack-mob.webp" type="image/webp")
+      source(media="(max-width:479px)" srcset="img/pack-mob.png")
+      source(srcset="img/pack.webp" type="image/webp")
+      img.product__mob-img(src="img/pack.png", alt="product" width="421" height="511" loading='lazy')
+    .product__wrapper
+      picture
+        source(media='(max-width:767px)' srcset='img/dot.png')
+        source(type='image/webp' srcset='img/product__pack.webp')
+        img.product__pack(src='img/product__pack.png' alt='product' width="294" height="582" loading='lazy')
+      picture
+        source(media='(max-width:767px)' srcset='img/dot.png')
+        source(type='image/webp' srcset='img/product__prod.webp')
+        img.product__img(src='img/product__prod.png' alt='product' width="600" height="549" loading='lazy')

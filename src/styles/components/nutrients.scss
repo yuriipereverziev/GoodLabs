@@ -1,0 +1,372 @@
+.nutrients {
+    @include rm(1220) {
+        padding-top: 90px;
+        padding-bottom: 80px;
+    }
+    &__title {
+        margin-bottom: 10px;
+        @include rm(1024) {
+            margin-bottom: 20px;
+        }
+        @include rm(1220) {
+            text-align: center;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 15px;
+
+
+        @include rm(640) {
+            margin-bottom: 20px;
+        }
+        @include rm(768) {
+            font-size: 20px;
+        }
+        @include rm(1024) {
+            line-height: 1.3;
+            margin-bottom: 50px;
+        }
+
+        br {
+          display: none;
+          @include rm(1024) {
+            display: block;
+          }
+        }
+    }
+    &__info {
+        font-size: 18px;
+        text-align: center;
+        color: #222222;
+        @include rm(768) {
+            font-size: 20px;
+        }
+    }
+    & .info__link {
+        position: relative;
+        color: $black;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $black;
+        }
+    }
+    & .info__link:hover::before {
+        transition: 0.2s;
+        background-color: white;
+    }
+    &__content-mob {
+        max-width: 320px;
+        margin: 0 auto 20px;
+        @include rm(640) {
+            margin: 0 0 20px 0;
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @include rm(768) {
+            margin: 0 0 30px 0;
+        }
+        @include rm(1024) {
+            display: none;
+        }
+    }
+    & .text__title {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #F2EEE7;
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: $black;
+        @include rm(1024) {
+            font-size: 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+    }
+    & .item__text {
+        margin-bottom: 5px;
+        @include rm(768) {
+            margin-bottom: 10px;
+        }
+        @include rm(1024) {
+            margin-bottom: 0;
+        }
+    }
+    & .text-info {
+        &--3 {
+            @include rm(640) {
+                min-height: 57px;
+            }
+            @include rm(768) {
+                min-height: 38px;
+            }
+        }
+    }
+    &__content-desktop {
+        display: none;
+        @include rm(1024) {
+            display: flex;
+            margin-bottom: 50px;
+            justify-content: center;
+            min-height: 510px;
+        }
+    }
+}
+
+.content-mob__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include rm(640) {
+        width: calc(50% - 10px);
+    }
+    &:nth-child(odd) {
+        @include rm(640) {
+            margin-right: 20px;
+        }
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 25px;
+        @include rm(768) {
+            margin-bottom: 30px;
+        }
+    }
+    &:nth-child(5) {
+        @include rm(640) {
+            margin-bottom: 0!important;
+        }
+    }
+}
+
+@include rm(1024) {
+    .content-desktop {
+        &__center {
+            background-color: #F4EEE2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 450px;
+            width: 260px;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            border-radius: 122px 122px 122px 122px / 120px 120px 120px 120px;
+            border: 5px solid #F4EEE2;
+        }
+        &__left {
+            text-align: right;
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 36%;
+            padding-bottom: 90px;
+            transition: 0.5s;
+            & .text__title {
+                &::before {
+                   content: "";
+                   position: absolute;
+                   width: 9px;
+                   height: 9px;
+                   background-color: #F58D17;
+                   right: -20px;
+                   top: 50%;
+                   transform: translateY(-50%);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    background-color: #F58D17;
+                    right: -140px;
+                    top: 50%;
+                    width: 120px;
+                }
+            }
+        }
+        &__right {
+            text-align: left;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 36%;
+            padding-top: 90px;
+            & .text__title {
+                &::before {
+                   content: "";
+                   position: absolute;
+                   width: 9px;
+                   height: 9px;
+                   background-color: #F58D17;
+                   left: -20px;
+                   top: 50%;
+                   transform: translateY(-50%);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    background-color: #F58D17;
+                    left: -140px;
+                    top: 50%;
+                    width: 120px;
+                }
+            }
+        }
+
+    }
+    & .center__product {
+        max-width: 160px;
+    }
+    .center__cover {
+        position: absolute;
+        opacity: 0;
+        min-height: 5px;
+        height: 75px;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        transition: 3s;
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+        &--1 {
+            top: 0;
+            transition-delay: 0s;
+        }
+        &--2 {
+            top: 75px;
+            transition-delay: 0.6s;
+        }
+        &--3 {
+            top: 150px;
+            transition-delay: 1.2s;
+        }
+        &--4 {
+            top: 225px;
+            transition-delay: 1.8s;
+        }
+        &--5 {
+            top: 300px;
+            transition-delay: 2.4s;
+        }
+        &--6 {
+            top: 375px;
+            transition-delay: 3s;
+        }
+    }
+    .nutrients.show .center__cover {
+        height: 75px;
+        opacity: 1
+    }
+    .nutrients .item__text {
+        opacity: 0;
+    }
+    .content-desktop__left .item__text {
+        position: relative;
+    }
+    .content-desktop__right .item__text {
+        position: relative;
+    }
+    .nutrients.show .item__text {
+        opacity: 1;
+        transition: 3s;
+        &--6 {
+            transition-delay: 3s;
+        }
+        &--5 {
+            transition-delay: 2.4s;
+        }
+        &--4 {
+            transition-delay: 1.8s;
+        }
+        &--3 {
+            transition-delay: 1.2s;
+        }
+        &--2 {
+            transition-delay: .6s;
+        }
+        &--1 {
+            transition-delay: 0s;
+        }
+    }
+
+}
+
+@include rm(1220) {
+    .content-desktop {
+        &__center {
+            height: 639px;
+            width: 355px;
+            overflow: hidden;
+            border-radius: 170px 170px 170px 170px / 170px 170px 170px 170px;
+            border: 15px solid #F4EEE2;
+        }
+        &__left {
+            padding-top: 55px;
+            padding-bottom: 100px;
+            padding-right: 90px;
+        }
+        &__right {
+            padding-top: 148px;
+            padding-bottom: 0px;
+            padding-left: 90px;
+        }
+    }
+    .center__cover {
+        height: 103px;
+        transition: 3s;
+        &--1 {
+            top: 0;
+            transition-delay: 0s;
+        }
+        &--2 {
+            top: 103px;
+            transition-delay: .6s;
+        }
+        &--3 {
+            top: 206px;
+            transition-delay: 1.2s;
+        }
+        &--4 {
+            top: 309px;
+            transition-delay: 1.8s;
+        }
+        &--5 {
+            top: 412px;
+            transition-delay: 2.4s;
+        }
+        &--6 {
+            top: 515px;
+            transition-delay: 3s;
+        }
+    }
+    .nutrients.show .center__cover {
+        height: 103px;
+        opacity: 1
+    }
+    .nutrients {
+        & .text__title {
+            padding: 10px 13px;
+        }
+        & .text-info {
+            line-height: 1.5;
+        }
+        &__content-desktop {
+            min-height: 668px;
+        }
+    }
+    .center__product {
+        max-width: 210px;
+    }
+}

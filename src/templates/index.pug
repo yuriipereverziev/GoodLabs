@@ -1,0 +1,41 @@
+extends settings/layout
+
+prepend html
+  - const lang = "ru";
+
+prepend head
+  - const pageTitle = "Купить GoodLabs IMMUNAL недорого. Цены, отзывы. Закажите GoodLabs IMMUNAL сейчас!";
+  - const themeColor = "#ffffff";
+
+append head
+
+append content
+        //include components/banner-red
+        //include components/header
+        include components/promo3
+        include components/marks
+        include components/conception
+        //include components/banner-red
+        include components/action
+        include components/winter
+        include components/protect
+        include components/quality
+        //include components/banner-red
+        include components/action
+        include components/vitamins
+        include components/nutrients
+        include components/scientists
+        include components/about
+        include components/reviews
+        include components/product
+        include components/suggest
+        include components/order
+        //include components/banner-red
+        include components/action
+        include components/questions
+        include components/promo-last3
+        include components/footer
+        include components/popup
+
+append scripts
+

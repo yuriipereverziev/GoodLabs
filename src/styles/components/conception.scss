@@ -1,0 +1,264 @@
+.conception__medal {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #b9b9b9;
+
+  @include rm(768) {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include rm(1024) {
+    margin-bottom: 70px;
+    padding-bottom: 50px;
+  }
+
+  @include rm(1220) {
+    margin-bottom: 110px;
+  }
+}
+
+.conception__wrapper {
+  @include rm(1024) {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  @include rm(1220) {
+    margin-bottom: 90px;
+  }
+}
+
+.conception__title {
+  margin-bottom: 20px;
+  line-height: 1.1;
+  @include rm(1024) {
+    font-size: 36px;
+    line-height: 46px;
+    margin-right: 40px;
+    margin-bottom: 0;
+    text-align: left;
+    max-width: 370px;
+    flex-shrink: 0;
+  }
+  @include rm(1220) {
+    max-width: 410px;
+    font-size: 40px;
+    line-height: 50px;
+    margin-right: 60px;
+  }
+}
+
+.conception__text {
+  margin-bottom: 25px;
+  line-height: 1.2;
+  text-align: center;
+  @include rm(768) {
+    margin-bottom: 30px;
+  }
+  @include rm(1024) {
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 22px;
+  }
+  @include rm(1220) {
+    line-height: 25px;
+  }
+}
+
+.conception__slider {
+  max-width: 370px;
+  position: relative;
+  margin: 0 auto 80px;
+  @include rm(768) {
+    max-width: 100%;
+  }
+}
+
+.conception .slick-dots {
+  bottom: -34px;
+}
+
+.conception .slick-slide {
+  margin: 0 20px;
+  @include rm(480) {
+    margin: 0 10px;
+  }
+  @include rm(1220) {
+    margin: 0 15px;
+  }
+}
+
+.conception .arrow-left {
+  left: 0;
+
+  @include rm(480) {
+    left: -10px;
+  }
+  @include rm(1024) {
+    left: 20px;
+  }
+  @include rm(1220) {
+    left: -10px;
+  }
+  @include rm(1500) {
+    left: -60px;
+  }
+}
+
+.conception .arrow-right {
+  right: 0;
+  @include rm(480) {
+    right: -10px;
+  }
+  @include rm(1024) {
+    right: 20px;
+  }
+  @include rm(1220) {
+    right: -10px;
+  }
+  @include rm(1500) {
+    right: -60px;
+  }
+}
+
+.conception .arrow-left,
+.conception .arrow-right {
+  top: 80px;
+  z-index: 1;
+  width: 45px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px;
+  background:  #f2eee7;
+  @include rm(480) {
+    top: 95px;
+  }
+  @include rm(640) {
+    top: 95px;
+  }
+  @include rm(768) {
+    border: none;
+    padding: 0;
+    background: none;
+    width: auto;
+    height: auto;
+  }
+
+  @include rm(1024) {
+    top: 283px;
+  }
+  @include rm(1220) {
+    top: 105px;
+  }
+}
+
+.conception .slide {
+  background-color: #fff;
+}
+
+.conception .slide__photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+
+.conception .slide:hover .slide__img {
+  @include rm(1024) {
+    transform: scale(1.1);
+  }
+}
+
+.conception .slide__img {
+  @include rm(1024) {
+    transition: .4s;
+  }
+}
+
+.conception .slide__desc {
+  display: flex;
+  justify-content: center;
+  @include rm(768) {
+    justify-content: flex-start;
+  }
+
+}
+
+.conception .slide__text {
+  text-align: center;
+  position: relative;
+
+  color: black;
+  @include rm(768) {
+    text-align: left;
+    padding-left: 40px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      left: 15px;
+      background-color: #f58d17;
+    }
+  }
+  @include rm(1220) {
+    line-height: 1.6;
+  }
+
+
+}
+
+.conception__desc {
+  position: relative;
+  font-size: 20px;
+
+  color: black;
+
+  //&::before {
+  //  position: absolute;
+  //  content: "";
+  //  top: 0;
+  //  left: 7px;
+  //  width: 3px;
+  //  height: 100%;
+  //  background-color: red;
+  //  @include rm(1024) {
+  //    left: 22px;
+  //  }
+  //}
+  @include rm(640) {
+    font-size: 22px;
+  }
+  @include rm(768) {
+    //padding-left: 25px;
+    font-size: 24px;
+  }
+  @include rm(1024) {
+    padding-left: 45px;
+    font-size: 26px;
+  }
+}
+
+//.conception__desc:before {
+//  position: absolute;
+//  content: "";
+//  top: 0;
+//  left: 7px;
+//  width: 3px;
+//  height: 100%;
+//  background-color: #f58d17;
+//  @include rm(1024) {
+//    left: 22px;
+//  }
+//}
+
+.conception.block {
+  @include rm(1220) {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+}
